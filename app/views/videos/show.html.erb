@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col m3">
+    <ul class="collection with-header">
+       <li class="collection-header"><h4>フリーエンジニアになるには</h4></li>
+       <% @videos.each do |video| %>
+         <%= link_to video.title, video, :class => 'collection-item' %>
+       <% end %>
+     </ul>
+  </div>
+  <div class="col m9">
+    <div class="card">
+        <div class="card-image">
+          <div id="wistia_<%= @video.wistia %>" class="wistia_embed">&nbsp;</div>
+
+          <span class="card-title"><%= @video.title %></span>
+        </div>
+        <div class="card-content">
+          <p><%= @video.description %></p>
+        </div>
+        <div class="card-action">
+          <%= link_to "前へ進む", @prev_video if !@prev_video.nil? %>
+          <span class="badge">
+            <%= link_to "次へ進む", @next_video if !@next_video.nil? %>
+          </span>
+        </div>
+      </div>
+  </div>
+</div>
+
+<script src="//fast.wistia.com/assets/external/E-v1.js"></script>
+
+<div id="wistia_abcde12345" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
+<script src="//fast.wistia.com/assets/external/E-v1.js"></script>
+<script>
+wistiaEmbed = Wistia.embed("<%= @video.wistia %>", {
+  videoQuality:"hd-only",
+  videoFoam: true,
+  autoPlay: true,
+  controlsVisibleOnLoad: false
+});
+function setPlaySpeed(speed) {
+  wistiaEmbed.playbackRate(speed);
+}
+
+</script>

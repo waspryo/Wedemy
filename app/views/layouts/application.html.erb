@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Newbies</title>
+    <title>Wedemy</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -18,16 +18,16 @@
 
   <body>
     <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
+    <div class="nav-wrapper  red darken-4">
+      <%= link_to "Wedemy", root_path, :class => "brand-logo" %>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-          <li><a href="#"><i class="material-icons">list_alt</i></a></li>
+          <li><a href="<%= root_path %>"><i class="material-icons">list_alt</i></a></li>
           <li><a href="<%= pages_about_path %>"><i class="material-icons">person</i></a></li>
           <li><a href="<%= pages_contact_path %>"><i class="material-icons">pin_drop</i></a></li>
         </ul>
           <ul class="sidenav" id="mobile-demo">
-          <li><a href="#"><i class="material-icons">list_alt</i></a></li>
+          <li><a href="<%= root_path %>"><i class="material-icons">list_alt</i></a></li>
           <li><a href="<%= pages_about_path %>"><i class="material-icons">person</i></a></li>
           <li><a href="<%= pages_contact_path %>"<i class=" material-icons">pin_drop</i></a></li>
         </ul>

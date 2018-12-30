@@ -1,0 +1,32 @@
+<%= form_with(model: @video, local: true) do |form| %>
+  <% if @video.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@video.errors.count, "error") %> prohibited this video from being saved:</h2>
+
+      <ul>
+      <% @video.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="input-field">
+    <%= form.text_field :wistia, maxlength: "50", class: "validate", id: "wistia", :placeholder => 'リンク', data: { length: "50" } %>
+  </div>
+  <div class="input-field">
+    <%= form.text_field :title, maxlength: "30", class: "validate", id: "title", :placeholder => 'タイトル', data: { length: "30" }  %>
+  </div>
+
+  <div class="input-field">
+    <%= form.text_area :description, maxlength: "800", class: "validate", id: "description", :placeholder => '説明文', data: { length: "800" } , :class => 'materialize-textarea'  %>
+  </div>
+  <button class="btn waves-effect waves-light" type="submit" name="action">送信</button>
+  <a href="<%= videos_path %>" class="btn waves-effect waves-light" name="action">戻る</a>
+<% end %>
+
+<script type="text/javascript">
+$(document).ready(function() {
+$('input#wistia, input#title, textarea#description').characterCounter();
+});
+</script>
