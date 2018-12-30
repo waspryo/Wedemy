@@ -7,66 +7,71 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-      <!-- Compiled and minified CSS -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-     <!-- materialize Icon -->
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- materialize Icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-     <!-- Compiled and minified JavaScript -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </head>
 
   <body>
-    <nav>
-    <div class="nav-wrapper  red darken-4">
-      <%= link_to "Wedemy", root_path, :class => "brand-logo" %>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-          <li><a href="<%= root_path %>"><i class="material-icons">list_alt</i></a></li>
-          <li><a href="<%= pages_about_path %>"><i class="material-icons">person</i></a></li>
-          <li><a href="<%= pages_contact_path %>"><i class="material-icons">pin_drop</i></a></li>
-        </ul>
-          <ul class="sidenav" id="mobile-demo">
-          <li><a href="<%= root_path %>"><i class="material-icons">list_alt</i></a></li>
-          <li><a href="<%= pages_about_path %>"><i class="material-icons">person</i></a></li>
-          <li><a href="<%= pages_contact_path %>"<i class=" material-icons">pin_drop</i></a></li>
-        </ul>
-      </div>
-    </nav>
 
-    <ul class="sidenav" id="mobile-demo">
-      <li>
-        <a href="sass.html">Sass</a>
-      </li>
-      <li>
-        <a href="badges.html">Components</a>
-      </li>
-      <li>
-        <a href="collapsible.html">Javascript</a>
-      </li>
-      <li>
-        <a href="mobile.html">Mobile</a>
+    <nav>
+      <div class="nav-wrapper  red darken-4">
+        <%= link_to "Wedemy", root_path, :class => "brand-logo" %>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="<%= videos_url %>">
+              <i class="material-icons">list_alt</i>
+            </a>
+          </li>
+          <li>
+            <a href="<%= pages_about_path %>">
+              <i class="material-icons">person</i>
+            </a>
+          </li>
+          <li>
+            <a href="<%= pages_contact_path %>">
+              <i class="material-icons">pin_drop</i>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidenav" id="mobile-demo">
+          <li>
+            <a href="<%= videos_url %>">
+              <i class="material-icons">list_alt</i>
+            </a>
+          </li>
+          <li>
+            <a href="<%= pages_about_path %>">
+              <i class="material-icons">person</i>
+            </a>
+          </li>
+          <li><a href="<%= pages_contact_path %>" <i class=" material-icons">pin_drop</i>
+        </a>
       </li>
     </ul>
+  </div>
+</nav>
 
+<%= yield %>
 
-    <div class="row">
-      <div class="col m10 offset-m1">
-        <%= yield %>
-      </div>
-    </div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems, options);
-      });
+  // Or with jQuery
 
-      // Or with jQuery
-
-      $(document).ready(function(){
-        $('.sidenav').sidenav();
-      });
-    </script>
-  </body>
+  $(document).ready(function () {
+    $('.sidenav').sidenav();
+  });
+</script>
+</body>
 </html>

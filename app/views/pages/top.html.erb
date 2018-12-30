@@ -1,0 +1,52 @@
+<div class="parallax-container">
+  <div class="parallax"><%= image_tag "ocean.jpg", class: "responsive-img" %></div>
+</div>
+<div class="section white">
+  <div class="row container">
+    <h2 class="header">日本初、オンライン型ダイレクト授業</h2>
+    <p class="grey-text text-darken-3 lighten-3">従来のプログラミング学習とは異なり先生とのマンツーマンの状態でオンラインでお互いにリアルタイムでコードを書いていくというスタイル。</p>
+  </div>
+</div>
+<div class="parallax-container">
+  <div class="parallax"><%= image_tag "online.jpg", class: "responsive-img" %></div>
+</div>
+<div class="section white">
+  <div class="row container">
+    <h2 class="header">学生や社会人の人気のコース多数あり</h2>
+    <p class="grey-text text-darken-3 lighten-3">普段は授業やお仕事で中々学ぶ事が出来ない方や、遠方からの授業もオンラインなら大丈夫！</p>
+  </div>
+</div>
+<div class="parallax-container">
+  <div class="parallax"><%= image_tag "man.jpg", class: "responsive-img" %></div>
+</div>
+<div class="section white">
+      <div class="row container">
+        <h2 class="header">学生向けのコース</h2>
+        <p class="grey-text text-darken-3 lighten-3">学生向けコースには就職に有利なポートフォリオ作り、またスキルシートや面接の対応など様々。</p>
+      </div>
+    </div>
+    <div class="parallax-container">
+      <div class="parallax"><%= image_tag "student.jpg", class: "responsive-img" %></div>
+    </div>
+    <div class="section white">
+      <div class="row container">
+        <h2 class="header">社会人向けコース</h2>
+        <p class="grey-text text-darken-3 lighten-3">学びたいけどスクールに通う時間がない方に仕事の合間で資格習得やスキルを学びキャリアップに繋げましょう。</p>
+      </div>
+    </div>
+    <div class="parallax-container">
+      <div class="parallax"><%= image_tag "adult.jpg", class: "responsive-img" %></div>
+    </div>
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.parallax');
+    var instances = M.Parallax.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function () {
+    $('.parallax').parallax();
+  });
+</script>
