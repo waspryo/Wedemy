@@ -5,6 +5,9 @@ class PagesController < ApplicationController
   def contact
   end
 
-  def top    
+  def top
+  end
+
+  def show  
   end
 end

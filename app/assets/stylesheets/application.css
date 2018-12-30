@@ -13,3 +13,120 @@
  *= require_tree .
  *= require_self
  */
+ /*===================================
+   Default Theme
+   -----------------------------------
+   Fonts: Raleway & Open Sans
+   -----------------------------------
+   Colors:
+       Moon Yellow:        #f4c613
+       Gray:               #212226
+       white Smoke:        #f4f4f4
+       white:              #fff
+       Black:              #000
+ ===================================*/
+ /*===================================
+               Html, body
+ ===================================*/
+ html, body {
+   height: 100%;
+ }
+
+ body {
+   color: #212226;
+ }
+
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+   font-family: "Raleway", sans-serif;
+ }
+
+ p {
+   font-family: "Open Sans", sans-serif;
+   font-size: 13px;
+   font-weight: 400;
+   line-height: 24px;
+ }
+
+ section {
+   background: #fff;
+   overflow: hidden;
+ }
+ .parallax-container  {
+   position: absolute;
+   z-index: 0;
+ }
+ .parallax {
+   background-color: rgba(0,0,0,0.9);
+	/* どの範囲に重ねるかを指定 */
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: ' ';
+ }
+ .parallax h1 {
+   position: relative;
+   z-index: 1;
+  color: #fff;
+  text-align: center;
+  top: 30%;
+  font-family: "Raleway", sans-serif;
+  font-size: 90px;
+  letter-spacing: 18px;
+ }
+.parallax  .responsive-img {
+-webkit-filter: grayscale(10%);
+}
+.parallax h1 span {
+  font-weight: 100;
+  font-family: 'Noto Serif TC', serif;
+}
+.parallax strong {
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  color: #d84315 ;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+h2.header  {
+  font-size: 45px;
+  text-align: center;
+}
+.grey-text.text-darken-3 {
+  text-align: center;
+}
+.section-1  {
+  padding: 120px 0 90px 0;
+}
+/* Button */
+.waves-effect {
+  left: 43%;
+}
+/*===================================
+              Footer
+===================================*/
+footer {
+  background-color: #d84315;
+}
+.footer-copyright{
+  background-color: #bf360c;
+}
+.footer-copyright p {
+  text-align: center;
+}
+/*===================================
+              User page
+===================================*/
+.紹介 {
+  background-color:  #505763;
+  height: 350px;
+}
+.top-text h4 {
+  color: #fff;
+}
