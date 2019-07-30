@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+WedemyはRuby on Railsで作った動画学習さいとです。
 
-Things you may want to cover:
+# 機能
 
-* Ruby version
+* 動画埋め込み機能
 
-* System dependencies
+* TwitterApi連携
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* プロフィール機能
